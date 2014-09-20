@@ -19,35 +19,35 @@ tt, code, pre {
    font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
 }
 
-h1 { 
-   font-size:2.2em; 
+h1 {
+   font-size:2.2em;
 }
 
-h2 { 
-   font-size:1.8em; 
+h2 {
+   font-size:1.8em;
 }
 
-h3 { 
-   font-size:1.4em; 
+h3 {
+   font-size:1.4em;
 }
 
-h4 { 
-   font-size:1.0em; 
+h4 {
+   font-size:1.0em;
 }
 
-h5 { 
-   font-size:0.9em; 
+h5 {
+   font-size:0.9em;
 }
 
-h6 { 
-   font-size:0.8em; 
+h6 {
+   font-size:0.8em;
 }
 
 a:visited {
    color: rgb(50%, 0%, 50%);
 }
 
-pre {	
+pre {
    margin-top: 0;
    max-width: 95%;
    border: 1px solid #ccc;
@@ -82,54 +82,54 @@ hr {
 }
 
 @media print {
-   * { 
-      background: transparent !important; 
-      color: black !important; 
-      filter:none !important; 
-      -ms-filter: none !important; 
+   * {
+      background: transparent !important;
+      color: black !important;
+      filter:none !important;
+      -ms-filter: none !important;
    }
 
-   body { 
-      font-size:12pt; 
-      max-width:100%; 
-   }
-       
-   a, a:visited { 
-      text-decoration: underline; 
+   body {
+      font-size:12pt;
+      max-width:100%;
    }
 
-   hr { 
+   a, a:visited {
+      text-decoration: underline;
+   }
+
+   hr {
       visibility: hidden;
       page-break-before: always;
    }
 
-   pre, blockquote { 
-      padding-right: 1em; 
-      page-break-inside: avoid; 
+   pre, blockquote {
+      padding-right: 1em;
+      page-break-inside: avoid;
    }
 
-   tr, img { 
-      page-break-inside: avoid; 
+   tr, img {
+      page-break-inside: avoid;
    }
 
-   img { 
-      max-width: 100% !important; 
+   img {
+      max-width: 100% !important;
    }
 
-   @page :left { 
-      margin: 15mm 20mm 15mm 10mm; 
-   }
-     
-   @page :right { 
-      margin: 15mm 10mm 15mm 20mm; 
+   @page :left {
+      margin: 15mm 20mm 15mm 10mm;
    }
 
-   p, h2, h3 { 
-      orphans: 3; widows: 3; 
+   @page :right {
+      margin: 15mm 10mm 15mm 20mm;
    }
 
-   h2, h3 { 
-      page-break-after: avoid; 
+   p, h2, h3 {
+      orphans: 3; widows: 3;
+   }
+
+   h2, h3 {
+      page-break-after: avoid;
    }
 }
 
@@ -189,7 +189,7 @@ hljs.initHighlightingOnLoad();
 
 <h2>Project Approach</h2>
 
-<p>-The training data set was downloaded and inspected for data quality. 
+<p>-The training data set was downloaded and inspected for data quality.
 -A usable tidy dataset was created from the raw data by which involved discarding some  variables.<br/>
 -Tidy data set was  partitioned into training,cross validation, and test sets.
 -Random Forest was selected as the algorithm for training given input from course instructors on its real-world efficacy.
@@ -258,24 +258,24 @@ factorcols &lt;- which(colclasses == &quot;factor&quot;)
 names(tmpData[, factorcols])
 </code></pre>
 
-<pre><code>##  [1] &quot;user_name&quot;               &quot;cvtd_timestamp&quot;         
-##  [3] &quot;new_window&quot;              &quot;kurtosis_roll_belt&quot;     
-##  [5] &quot;kurtosis_picth_belt&quot;     &quot;kurtosis_yaw_belt&quot;      
-##  [7] &quot;skewness_roll_belt&quot;      &quot;skewness_roll_belt.1&quot;   
-##  [9] &quot;skewness_yaw_belt&quot;       &quot;max_yaw_belt&quot;           
-## [11] &quot;min_yaw_belt&quot;            &quot;amplitude_yaw_belt&quot;     
-## [13] &quot;kurtosis_roll_arm&quot;       &quot;kurtosis_picth_arm&quot;     
-## [15] &quot;kurtosis_yaw_arm&quot;        &quot;skewness_roll_arm&quot;      
-## [17] &quot;skewness_pitch_arm&quot;      &quot;skewness_yaw_arm&quot;       
+<pre><code>##  [1] &quot;user_name&quot;               &quot;cvtd_timestamp&quot;
+##  [3] &quot;new_window&quot;              &quot;kurtosis_roll_belt&quot;
+##  [5] &quot;kurtosis_picth_belt&quot;     &quot;kurtosis_yaw_belt&quot;
+##  [7] &quot;skewness_roll_belt&quot;      &quot;skewness_roll_belt.1&quot;
+##  [9] &quot;skewness_yaw_belt&quot;       &quot;max_yaw_belt&quot;
+## [11] &quot;min_yaw_belt&quot;            &quot;amplitude_yaw_belt&quot;
+## [13] &quot;kurtosis_roll_arm&quot;       &quot;kurtosis_picth_arm&quot;
+## [15] &quot;kurtosis_yaw_arm&quot;        &quot;skewness_roll_arm&quot;
+## [17] &quot;skewness_pitch_arm&quot;      &quot;skewness_yaw_arm&quot;
 ## [19] &quot;kurtosis_roll_dumbbell&quot;  &quot;kurtosis_picth_dumbbell&quot;
-## [21] &quot;kurtosis_yaw_dumbbell&quot;   &quot;skewness_roll_dumbbell&quot; 
-## [23] &quot;skewness_pitch_dumbbell&quot; &quot;skewness_yaw_dumbbell&quot;  
-## [25] &quot;max_yaw_dumbbell&quot;        &quot;min_yaw_dumbbell&quot;       
-## [27] &quot;amplitude_yaw_dumbbell&quot;  &quot;kurtosis_roll_forearm&quot;  
-## [29] &quot;kurtosis_picth_forearm&quot;  &quot;kurtosis_yaw_forearm&quot;   
-## [31] &quot;skewness_roll_forearm&quot;   &quot;skewness_pitch_forearm&quot; 
-## [33] &quot;skewness_yaw_forearm&quot;    &quot;max_yaw_forearm&quot;        
-## [35] &quot;min_yaw_forearm&quot;         &quot;amplitude_yaw_forearm&quot;  
+## [21] &quot;kurtosis_yaw_dumbbell&quot;   &quot;skewness_roll_dumbbell&quot;
+## [23] &quot;skewness_pitch_dumbbell&quot; &quot;skewness_yaw_dumbbell&quot;
+## [25] &quot;max_yaw_dumbbell&quot;        &quot;min_yaw_dumbbell&quot;
+## [27] &quot;amplitude_yaw_dumbbell&quot;  &quot;kurtosis_roll_forearm&quot;
+## [29] &quot;kurtosis_picth_forearm&quot;  &quot;kurtosis_yaw_forearm&quot;
+## [31] &quot;skewness_roll_forearm&quot;   &quot;skewness_pitch_forearm&quot;
+## [33] &quot;skewness_yaw_forearm&quot;    &quot;max_yaw_forearm&quot;
+## [35] &quot;min_yaw_forearm&quot;         &quot;amplitude_yaw_forearm&quot;
 ## [37] &quot;classe&quot;
 </code></pre>
 
@@ -290,14 +290,14 @@ names(tmpData[, integercols])
 </code></pre>
 
 <pre><code>##  [1] &quot;X&quot;                    &quot;raw_timestamp_part_1&quot; &quot;raw_timestamp_part_2&quot;
-##  [4] &quot;num_window&quot;           &quot;total_accel_belt&quot;     &quot;accel_belt_x&quot;        
-##  [7] &quot;accel_belt_y&quot;         &quot;accel_belt_z&quot;         &quot;magnet_belt_x&quot;       
-## [10] &quot;magnet_belt_y&quot;        &quot;magnet_belt_z&quot;        &quot;total_accel_arm&quot;     
-## [13] &quot;accel_arm_x&quot;          &quot;accel_arm_y&quot;          &quot;accel_arm_z&quot;         
-## [16] &quot;magnet_arm_x&quot;         &quot;magnet_arm_y&quot;         &quot;magnet_arm_z&quot;        
-## [19] &quot;total_accel_dumbbell&quot; &quot;accel_dumbbell_x&quot;     &quot;accel_dumbbell_y&quot;    
-## [22] &quot;accel_dumbbell_z&quot;     &quot;magnet_dumbbell_x&quot;    &quot;magnet_dumbbell_y&quot;   
-## [25] &quot;total_accel_forearm&quot;  &quot;accel_forearm_x&quot;      &quot;accel_forearm_y&quot;     
+##  [4] &quot;num_window&quot;           &quot;total_accel_belt&quot;     &quot;accel_belt_x&quot;
+##  [7] &quot;accel_belt_y&quot;         &quot;accel_belt_z&quot;         &quot;magnet_belt_x&quot;
+## [10] &quot;magnet_belt_y&quot;        &quot;magnet_belt_z&quot;        &quot;total_accel_arm&quot;
+## [13] &quot;accel_arm_x&quot;          &quot;accel_arm_y&quot;          &quot;accel_arm_z&quot;
+## [16] &quot;magnet_arm_x&quot;         &quot;magnet_arm_y&quot;         &quot;magnet_arm_z&quot;
+## [19] &quot;total_accel_dumbbell&quot; &quot;accel_dumbbell_x&quot;     &quot;accel_dumbbell_y&quot;
+## [22] &quot;accel_dumbbell_z&quot;     &quot;magnet_dumbbell_x&quot;    &quot;magnet_dumbbell_y&quot;
+## [25] &quot;total_accel_forearm&quot;  &quot;accel_forearm_x&quot;      &quot;accel_forearm_y&quot;
 ## [28] &quot;accel_forearm_z&quot;      &quot;magnet_forearm_x&quot;
 </code></pre>
 
@@ -333,8 +333,8 @@ testing &lt;- alltrndata[-inTrainCV, ]  # Testing data set is seperated out.(moc
 
 inTrain &lt;- createDataPartition(y = traincv$classe, p = 0.75, list = FALSE)
 
-training &lt;- traincv[inTrain, ]  # Training data set seperated out 
-crossvalidation &lt;- traincv[-inTrain, ]  # Cross Validation  data set seperated out 
+training &lt;- traincv[inTrain, ]  # Training data set seperated out
+crossvalidation &lt;- traincv[-inTrain, ]  # Cross Validation  data set seperated out
 
 ### 3 B - Identify number of relevant principle components covering 80 &amp; 90%
 ### of predictor variance and get the transformed data sets
@@ -370,7 +370,7 @@ training_0.9$classe &lt;- training$classe
 
 ### 3 C - Train 3 models with each of the predictor sets
 
-modelfitrfraw &lt;- train(classe ~ ., data = training, method = &quot;rf&quot;, ntree = 20, 
+modelfitrfraw &lt;- train(classe ~ ., data = training, method = &quot;rf&quot;, ntree = 20,
     preProcess = c(&quot;center&quot;, &quot;scale&quot;))
 
 modelfitrfpr_0.8 &lt;- train(classe ~ ., data = training_0.8, method = &quot;rf&quot;, ntree = 20)
@@ -401,21 +401,21 @@ prresults_0.9 &lt;- confusionMatrix(data = predictionspr_0.9, crossval_0.9$class
 rawinputresults[[3]][1]
 </code></pre>
 
-<pre><code>## Accuracy 
+<pre><code>## Accuracy
 ##   0.9909
 </code></pre>
 
 <pre><code class="r">prresults_0.8[[3]][1]
 </code></pre>
 
-<pre><code>## Accuracy 
+<pre><code>## Accuracy
 ##   0.9347
 </code></pre>
 
 <pre><code class="r">prresults_0.9[[3]][1]
 </code></pre>
 
-<pre><code>## Accuracy 
+<pre><code>## Accuracy
 ##   0.9487
 </code></pre>
 
@@ -435,11 +435,11 @@ rawinputresults[[3]][1]
 ## longer than the author was willing to wait
 
 
-rf_10 &lt;- train(classe ~ ., data = training, method = &quot;rf&quot;, ntree = 10, preProcess = c(&quot;center&quot;, 
+rf_10 &lt;- train(classe ~ ., data = training, method = &quot;rf&quot;, ntree = 10, preProcess = c(&quot;center&quot;,
     &quot;scale&quot;))
-rf_20 &lt;- train(classe ~ ., data = training, method = &quot;rf&quot;, ntree = 20, preProcess = c(&quot;center&quot;, 
+rf_20 &lt;- train(classe ~ ., data = training, method = &quot;rf&quot;, ntree = 20, preProcess = c(&quot;center&quot;,
     &quot;scale&quot;))
-rf_30 &lt;- train(classe ~ ., data = training, method = &quot;rf&quot;, ntree = 30, preProcess = c(&quot;center&quot;, 
+rf_30 &lt;- train(classe ~ ., data = training, method = &quot;rf&quot;, ntree = 30, preProcess = c(&quot;center&quot;,
     &quot;scale&quot;))
 
 
@@ -456,21 +456,21 @@ result_30 &lt;- confusionMatrix(data = predictions_30, testing$classe)
 result_10[[3]][1]
 </code></pre>
 
-<pre><code>## Accuracy 
+<pre><code>## Accuracy
 ##   0.9862
 </code></pre>
 
 <pre><code class="r">result_20[[3]][1]
 </code></pre>
 
-<pre><code>## Accuracy 
+<pre><code>## Accuracy
 ##   0.9909
 </code></pre>
 
 <pre><code class="r">result_30[[3]][1]
 </code></pre>
 
-<pre><code>## Accuracy 
+<pre><code>## Accuracy
 ##   0.9906
 </code></pre>
 
@@ -482,7 +482,7 @@ result_10[[3]][1]
 
 <h2>Estimating Out of Sample Error</h2>
 
-<p>Out of sample error is estimated to be in the order of  1.2 %, which is to say that the model seems to generalize  well at least within the above  dataset.   </p>
+<p>Out of sample error is estimated to be in the order of  1 %, which is to say that the model seems to generalize  well at least within the above  dataset.   </p>
 
 <p>Error estimate is based on crossvalidation &amp; tuning results</p>
 
@@ -517,7 +517,7 @@ pml_write_files = function(x) {
     n = length(x)
     for (i in 1:n) {
         filename = paste0(&quot;problem_id_&quot;, i, &quot;.txt&quot;)
-        write.table(x[i], file = filename, quote = FALSE, row.names = FALSE, 
+        write.table(x[i], file = filename, quote = FALSE, row.names = FALSE,
             col.names = FALSE)
     }
 }

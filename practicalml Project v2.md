@@ -321,7 +321,7 @@ result_30[[3]][1]
 
 ## Estimating Out of Sample Error 
 
-Out of sample error is estimated to be in the order of  1.2 %, which is to say that the model seems to generalize  well at least within the above  dataset.   
+Out of sample error is estimated to be in the order of  1 %, which is to say that the model seems to generalize  well at least within the above  dataset.   
  
 Error estimate is based on crossvalidation & tuning results
 
